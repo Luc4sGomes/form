@@ -36,24 +36,3 @@ form.addEventListener("animationstart", (event) => {
     document.querySelector("body").style.overflow = "hidden";
   }
 });
-
-/*const btnSubmit = document.querySelector(".btn-login");
-const form = document.querySelector("form");
-
-btnSubmit.addEventListener("click", (event) => {
-  event.preventDefault();
-  form.classList.add("form-hide");
-});
-
-form.addEventListener("animationend", (event) => { //sera executado quando terminar a animacao
-  if (event.animationName === "down") { //se possuir a animacao com nome down
-    form.style.display = "none"; 
-    document.querySelector("body").style.overflow = "none";
-  }
-});
-
-form.addEventListener("animationstart", (event) =>{ //sera executado quando a animacao startar
-    if(event.animationName ==="down"){ //se possuir a animacao com nome down
-        document.querySelector("body").style.overflow = "hidden";
-    }
-});*/
