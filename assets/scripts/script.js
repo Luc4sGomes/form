@@ -23,7 +23,6 @@ btnSubmit.addEventListener("click", (event) => {
     form.classList.add("form-hide");
   }
 });
-
 form.addEventListener("animationend", (event) => {
   if (event.animationName === "down") {
     form.style.display = "none";
