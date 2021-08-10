@@ -7,6 +7,7 @@
 html,
 body {
   height: 100vh;
+  overflow: hidden;
 }
 
 body {
@@ -150,4 +151,29 @@ form.validate-error {
   70% {
     transform: translateX(15%);
   }
+}
+
+.squares li{
+    animation: up 2s infinite;
+    animation-direction: alternate;
+    width: 40px;
+    height:40px;
+    background-color: rgba(255,255,255,0.15);
+    display: block;
+    position: absolute;
+    bottom: -40px;
+}
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-800px) rotate(960deg);
+    }
 }
