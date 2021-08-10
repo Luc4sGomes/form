@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html,
 body{
-    background-color: rebeccapurple;
+    height: 100vh;
+}
+
+body{
+ background-color: rebeccapurple;
+ font-family: Roboto,Arial,sans-serif;
 }
