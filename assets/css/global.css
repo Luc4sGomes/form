@@ -140,7 +140,8 @@ form.validate-error {
 }
 
 @keyframes nono {
-  0% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   35% {
@@ -149,21 +150,4 @@ form.validate-error {
   70% {
     transform: translateX(15%);
   }
-  100% {
-    transform: translateX(0);
-  }
 }
-
-/*.form-hide{
-    animation: down 5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes down{
-    from{
-        transform: translateY(0);
-    }
-    to{
-        transform: translateY(100vh);
-    }
-}*/
