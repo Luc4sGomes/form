@@ -29,7 +29,6 @@ form.addEventListener("animationend", (event) => {
     document.querySelector("body").style.overflow = "none";
   }
 });
-
 form.addEventListener("animationstart", (event) => {
   if (event.animationName === "down") {
     document.querySelector("body").style.overflow = "hidden";
