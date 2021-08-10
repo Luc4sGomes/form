@@ -19,6 +19,7 @@ section {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  
 }
 
 h1 {
@@ -36,8 +37,8 @@ form {
 }
 
 form .input-block label {
-  font-size: 14px;
-  color: darkslateblue;
+  font-size: 18px;
+  color: black;
 }
 
 form .input-block input {
@@ -46,18 +47,126 @@ form .input-block input {
   margin-top: 8px;
   padding: 7px;
   font-size: 16px;
-  color: #7159c1;
-  border-radius: 1px solid black;
-  outline-color: #7159c1;
+  color: black;
+  border-radius: 4px solid black;
+  outline: none;
+  transition: 200ms all ease-in-out;
+  
+}
+
+.input-block input:hover{
+    background-color: whitesmoke;
 }
 
 form .btn-login {
   display: block;
-  min-width: 120px;
+  font-size: 16px;
+  min-width: 340px;
   border: none;
-  background-color: blueviolet;
+  background-color: rebeccapurple;
   color: whitesmoke;
   border-radius: 25px;
-  margin: auto;
+  margin: 24px auto;
   padding: 7px;
+  transition: 200ms all ease-in-out;
 }
+
+.btn-login:hover{
+    background-color: black;
+}
+
+.form-wrapper{
+    width: 30%;
+}
+
+form{
+    overflow: hidden;
+    animation: fade 0.2s;
+}
+
+form .input-block:nth-child(1){
+    animation: move 500ms;
+}
+form .input-block:nth-child(2){
+    animation: move 400ms;
+    animation-delay: 100ms;
+    animation-fill-mode: backwards;
+}
+
+form .btn-login{
+    animation: move 400ms;
+    animation-delay: 200ms;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes move{
+    from{
+        opacity: 0;
+        transform: translateX(-35%);
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.form-hide{
+    animation: down 1.2s forwards;
+    animation-timing-function: cubic-bezier(0.075,0.82,0.165,1);
+}
+
+@keyframes down{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(100vh);
+    }
+}
+
+form.validate-error{
+    animation: nono 300ms linear, fade paused;
+    animation-iteration-count: 4;
+    background-color: rgb(156, 67, 67);
+}
+
+@keyframes nono{
+    0%{
+        transform: translateX(0);
+    }
+    35%{
+        transform: translateX(-15%);
+    }
+    70%{
+        transform: translateX(15%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/*.form-hide{
+    animation: down 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes down{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(100vh);
+    }
+}*/
